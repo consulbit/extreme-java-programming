@@ -15,15 +15,26 @@ public class StudentData {
     this.surname = surname;
   }
 
-  public static int compareTo(StudentData o1, StudentData o2) {
-    if (o1.getSurname().equals(o2.getSurname())) {
-      if (o1.getName().equals(o2.getName())) {
-        return Integer.compare(o1.getId(), o2.getId());
+//  public static int compareTo(StudentData this, StudentData o2) {
+//    if (o1.getSurname().equals(o2.getSurname())) {
+//      if (o1.getName().equals(o2.getName())) {
+//        return Integer.compare(o1.getId(), o2.getId());
+//      } else {
+//        return o1.getName().compareTo(o2.getName());
+//      }
+//    } else {
+//      return o1.getSurname().compareTo(o2.getSurname());
+//    }
+//  }
+  public int compareTo(StudentData o2) {
+    if (this.getSurname().equals(o2.getSurname())) {
+      if (this.getName().equals(o2.getName())) {
+        return Integer.compare(this.getId(), o2.getId());
       } else {
-        return o1.getName().compareTo(o2.getName());
+        return this.getName().compareTo(o2.getName());
       }
     } else {
-      return o1.getSurname().compareTo(o2.getSurname());
+      return this.getSurname().compareTo(o2.getSurname());
     }
   }
 

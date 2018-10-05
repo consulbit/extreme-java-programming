@@ -25,7 +25,7 @@ public class UserDataMain {
     users.add(new StudentData(9, "Giuseppe", "Cascio"));
     users.add(new StudentData(10, "Piero", "Cascio"));
 
-    sort(users, StudentData::compareTo);
+    sort(users, (o1, o2) -> o1.compareTo(o2));
 
     users.forEach(out::println);
   }
