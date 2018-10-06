@@ -1,4 +1,4 @@
-package com.edu.worksheet_1;
+package com.edu.worksheet_1.exercise_1;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -27,7 +27,7 @@ import java.util.Random;
  *
  * <p>Created by Pietro Cascio on 05/10/2018
  */
-public class Main {
+public class Exercise1 {
 
   private static Comparator<Integer> compareByDigitsLength = (i1, i2) -> {
     String value1Str = String.valueOf(i1);
@@ -40,7 +40,7 @@ public class Main {
 
   public static void main(String[] args) {
     Integer[] integers = new Integer[100];
-    Arrays.setAll(integers, Main::generateRandomNumber);
+    Arrays.setAll(integers, Exercise1::generateRandomNumber);
 
     Arrays.sort(integers, compareByDigitsLength);
 
