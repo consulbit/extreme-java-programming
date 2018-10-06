@@ -18,6 +18,44 @@ public class FilteredList<E> extends LinkedList<E> {
   }
 
   @Override
+  public boolean offer(E e) {
+    try {
+      addLast(e);
+    } catch (IllegalStateException e1) {
+      System.out.println(format("Error in adding the element!"));
+    }
+    return true;
+  }
+
+  @Override
+  public boolean offerLast(E e) {
+    try {
+      offer(e);
+    } catch (IllegalStateException e1) {
+      System.out.println(format("Error in adding the element!"));
+    }
+  }
+
+  @Override
+  public boolean offerFirst(E e) {
+    try {
+      addFirst(e);
+    } catch (IllegalStateException e1) {
+      System.out.println(format("Error in adding the element!"));
+    }
+    return true;
+  }
+
+  @Override
+  public void push(E e) {
+    try {
+      push(e);
+    } catch (IllegalStateException e1) {
+      System.out.println(format("Error in adding the element!"));
+    }
+  }
+
+  @Override
   public void addFirst(E e) {
     if (predicate.test(e)) {
       super.addFirst(e);
@@ -51,6 +89,5 @@ public class FilteredList<E> extends LinkedList<E> {
     } else {
       throw new IllegalArgumentException(format(ELEMENT_HAS_NOT_BEEN_ACCEPTED, element));
     }
-
   }
 }
