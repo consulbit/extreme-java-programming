@@ -13,10 +13,14 @@ import java.util.Random;
 public class Exercise_1_a {
   public static void main(String[] args) {
     Integer[] integers = new Integer[100];
-    Arrays.setAll(integers, integer -> integer = new Random().nextInt(100));
+    Arrays.setAll(integers, Exercise_1_a::generateRandomNumber);
 
     for (Integer integer : integers) {
       System.out.println(integer);
     }
+  }
+
+  private static int generateRandomNumber(int value) {
+    return new Random().nextInt(100);
   }
 }
