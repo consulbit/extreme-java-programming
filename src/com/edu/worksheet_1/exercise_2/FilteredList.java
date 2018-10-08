@@ -27,7 +27,7 @@ public class FilteredList<E> extends LinkedList<E> {
   @Override
   public boolean offer(E e) {
     try {
-      addLast(e);
+      super.addLast(e);
     } catch (IllegalStateException e1) {
       System.out.println(format("Error in adding the element! Error: %s", e1.getMessage()));
     }
@@ -37,7 +37,7 @@ public class FilteredList<E> extends LinkedList<E> {
   @Override
   public boolean offerLast(E e) {
     try {
-      offer(e);
+      super.offer(e);
       return true;
     } catch (IllegalStateException e1) {
       throw new IllegalArgumentException(
@@ -98,7 +98,7 @@ public class FilteredList<E> extends LinkedList<E> {
   @Override
   public void push(E e) {
     try {
-      push(e);
+      super.push(e);
     } catch (IllegalStateException e1) {
       throw new IllegalArgumentException(
           format("Error in adding the element! Error: %s", e1.getMessage()));
