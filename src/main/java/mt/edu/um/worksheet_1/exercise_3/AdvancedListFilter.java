@@ -1,4 +1,4 @@
-package com.edu.worksheet_1.exercise_3;
+package mt.edu.um.worksheet_1.exercise_3;
 
 import java.util.List;
 

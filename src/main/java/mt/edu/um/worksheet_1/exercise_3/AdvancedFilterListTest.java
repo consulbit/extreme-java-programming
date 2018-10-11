@@ -1,4 +1,8 @@
-package com.edu.worksheet_1.exercise_3;
+package mt.edu.um.worksheet_1.exercise_3;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * <h1>Advanced List Filtering using Lambda Expressions</h1>
@@ -24,6 +28,32 @@ package com.edu.worksheet_1.exercise_3;
  *
  * Created by Pietro Cascio on 06/10/2018
  */
-public class Exercise3 {
+public class AdvancedFilterListTest {
 
+  private static AdvancedListFilter<Integer> filterFunction =
+      (list, element) -> {
+        int newElement;
+        // Check if element is negative
+        if (element < 0) {
+          newElement = Math.abs(element);
+        } else {
+          newElement = element;
+        }
+        list.forEach(
+            listElement -> {
+              if (newElement % listElement == 0) {
+                throw new IllegalArgumentException("The element cannot be accepted");
+              }
+            });
+        return newElement;
+      };
+
+  public static void main(String[] args) {
+    AdvancedFilteredList advancedFilteredList = new AdvancedFilteredList(filterFunction);
+
+    List<Integer> seed = new ArrayList<>(Arrays.asList(81, 9, 27, -5, 14, 15, 3, -6));
+    advancedFilteredList.addAll(seed);
+
+    advancedFilteredList.forEach(System.out::println);
+  }
 }

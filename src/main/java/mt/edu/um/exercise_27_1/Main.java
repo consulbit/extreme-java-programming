@@ -1,9 +1,8 @@
-package com.edu.exercise_27_1;
+package main.java.mt.edu.um.exercise_27_1;
 
 import static java.util.Objects.requireNonNull;
 
 import java.io.File;
-import java.util.Objects;
 import java.util.Scanner;
 import java.util.stream.Stream;
 

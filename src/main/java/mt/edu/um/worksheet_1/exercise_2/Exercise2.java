@@ -1,4 +1,4 @@
-package com.edu.worksheet_1.exercise_2;
+package main.java.mt.edu.um.worksheet_1.exercise_2;
 
 /**
  * <h2>Filtered List using Lambda Expression</h2>
