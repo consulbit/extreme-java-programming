@@ -1,11 +1,14 @@
 package mt.edu.um.lesson_2;
 
+import java.util.List;
+
 /** Created by Pietro Cascio on 12/10/2018 */
 public class StudentData implements Student {
   private final long id;
   private final String name;
   private final String surname;
   private final Gender gender;
+  private List<String> emails;
 
   public StudentData(long id, String name, String surname, Gender gender) {
     this.id = id;
@@ -37,11 +40,20 @@ public class StudentData implements Student {
     sb.append(", surname='").append(surname).append('\'');
     sb.append(", gender=").append(gender);
     sb.append(", nationality=").append(this.getNationality());
+    sb.append(", emails=").append(this.getEmails());
     sb.append('}');
     return sb.toString();
   }
 
   public Gender getGender() {
     return this.gender;
+  }
+
+  public List<String> getEmails() {
+    return emails;
+  }
+
+  public void setEmails(List<String> emails) {
+    this.emails = emails;
   }
 }
