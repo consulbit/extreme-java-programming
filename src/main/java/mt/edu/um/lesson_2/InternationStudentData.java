@@ -7,8 +7,9 @@ public class InternationStudentData extends StudentData {
 
   private String nationality;
 
-  public InternationStudentData(long id, String name, String surname, String nationality) {
-    super(id, name, surname);
+  public InternationStudentData(long id, String name, String surname, String nationality,
+      Gender gender) {
+    super(id, name, surname, gender);
     this.nationality = nationality;
   }
 

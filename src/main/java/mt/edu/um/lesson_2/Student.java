@@ -11,6 +11,8 @@ public interface Student {
 
   Long getId();
 
+  Gender getGender();
+
   default String getNationality() {
     return "Maltese";
   }

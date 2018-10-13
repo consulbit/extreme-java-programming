@@ -38,6 +38,11 @@ public class StaffStudent implements Student, Staff {
   }
 
   @Override
+  public Gender getGender() {
+    return null;
+  }
+
+  @Override
   public String getNationality() {
     return Staff.super.getNationality();
   }
