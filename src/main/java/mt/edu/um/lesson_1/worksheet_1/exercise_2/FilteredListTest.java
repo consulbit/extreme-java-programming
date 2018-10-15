@@ -1,4 +1,4 @@
-package mt.edu.um.worksheet_1.exercise_2;
+package mt.edu.um.lesson_1.worksheet_1.exercise_2;
 
 import static java.lang.System.err;
 import static java.lang.System.out;

@@ -1,4 +1,4 @@
-package mt.edu.um.exercise_27_1;
+package mt.edu.um.lesson_1.exercise_27_1;
 
 import static java.util.Objects.requireNonNull;
 

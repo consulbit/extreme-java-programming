@@ -1,4 +1,4 @@
-package mt.edu.um.worksheet_1.exercise_1;
+package mt.edu.um.lesson_1.worksheet_1.exercise_1;
 
 import java.util.Arrays;
 import java.util.Comparator;

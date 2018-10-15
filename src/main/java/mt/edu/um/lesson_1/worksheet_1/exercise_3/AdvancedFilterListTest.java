@@ -1,4 +1,4 @@
-package mt.edu.um.worksheet_1.exercise_3;
+package mt.edu.um.lesson_1.worksheet_1.exercise_3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
