@@ -4,15 +4,18 @@ import java.util.stream.Stream;
 
 /**
  * <h1>LAS3006 – Worksheet 2 – Introduction to Streams</h1>
+ * <h2>Exercise 1</h2>
  *
  * <p>
  *
  * <ol>
- * <li><strong>Create an infinite Stream<Integer> for each of the following mathematical
+ * <li>
+ *   <strong>Create an infinite Stream<Integer> for each of the following mathematical
  * sequence:</strong><br> The triangular number series provides the sequence of numbers that can
  * form an equilateral triangle. The n<sup>th</sup> triangle number is the number of balls or dots
  * in a triangle, with n dots on one side.<br> The formula for this sequence is:<br>
  * <math> <box>T<sub>n</sub> = 1 + 2 + 3 + ... + n = n(n + 1)<over>/2</box> </math>
+ * </li>
  * </ol>
  *
  * Created by Pietro Cascio on 15/10/2018
