@@ -6,21 +6,23 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 /**
+ *
+ *
  * <h1>Exercise page 20</h1>
  *
  * <p>
  *
  * <ul>
- * <li>Using your previous Students exercise, add a new <strong>enum</strong> called
- * <strong>Gender</strong> and add at least <strong>MALE</strong> and <strong>FEMALE</strong>
- * to it (feel free to add others).
- * <li>Modify your <strong>StudentData</strong> class by adding a new field geneder (of type
- * Gender) and initialise it trough the constructor, add a getter method and update the
- * <strong>toString()</strong> accordingly. Update your array.
- * <li>From your students array, create a new <strong>Stream</strong> of only
- * <strong>MALE</strong> students and another stream of <strong>non-MALE</strong> students.
- * (Hint: Use the methods <strong>Stream.of()</strong> and <strong>filter()</strong>)
- * <li>Consume both streams, by first printing out the MALE students and then the non-MALE ones.
+ *   <li>Using your previous Students exercise, add a new <strong>enum</strong> called
+ *       <strong>Gender</strong> and add at least <strong>MALE</strong> and <strong>FEMALE</strong>
+ *       to it (feel free to add others).
+ *   <li>Modify your <strong>StudentData</strong> class by adding a new field geneder (of type
+ *       Gender) and initialise it trough the constructor, add a getter method and update the
+ *       <strong>toString()</strong> accordingly. Update your array.
+ *   <li>From your students array, create a new <strong>Stream</strong> of only
+ *       <strong>MALE</strong> students and another stream of <strong>non-MALE</strong> students.
+ *       (Hint: Use the methods <strong>Stream.of()</strong> and <strong>filter()</strong>)
+ *   <li>Consume both streams, by first printing out the MALE students and then the non-MALE ones.
  * </ul>
  *
  * Created by Pietro Cascio on 13/10/2018
@@ -38,6 +40,8 @@ public class Exercise_20 {
     students.add(new InternationStudentData(2, "User 2", "Surname 2", "French", Gender.FEMALE));
 
     // TODO: Question - Ask why I should've used the Stream.of() method
+    // ANSWER: because the students data structure should've been an array so Stream.of should've
+    // been used
     Stream<Student> maleStudents = students.stream().filter(maleStudentPredicate);
     System.out.println("Male students");
     maleStudents.forEach(System.out::println);
