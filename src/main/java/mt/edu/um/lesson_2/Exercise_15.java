@@ -22,8 +22,7 @@ import java.util.stream.Stream;
 public class Exercise_15 {
 
   public static void main(String[] args) {
-    Stream<Integer> multipleOfThree = Stream.iterate(1, seed -> seed + 1)
-        .filter(num -> (num % 3) == 0);
+    Stream<Integer> multipleOfThree = Stream.iterate(3, seed -> seed + 3);
 
     multipleOfThree
         .limit(10)
