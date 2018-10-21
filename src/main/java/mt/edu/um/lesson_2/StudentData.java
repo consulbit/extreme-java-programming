@@ -32,6 +32,10 @@ public class StudentData implements Student {
     return this.id;
   }
 
+  public Gender getGender() {
+    return this.gender;
+  }
+
   @Override
   public String toString() {
     final StringBuilder sb = new StringBuilder("StudentData{");
@@ -43,10 +47,6 @@ public class StudentData implements Student {
     sb.append(", emails=").append(this.getEmails());
     sb.append('}');
     return sb.toString();
-  }
-
-  public Gender getGender() {
-    return this.gender;
   }
 
   public List<String> getEmails() {

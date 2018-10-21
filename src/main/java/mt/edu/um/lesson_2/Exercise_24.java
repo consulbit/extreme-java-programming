@@ -37,7 +37,6 @@ public class Exercise_24 {
     Stream<String> allEmailAddresses = students.stream()
         .flatMap(student -> student.getEmails().stream());
     allEmailAddresses.forEach(System.out::println);
-//    students.forEach(System.out::println);
   }
 
   private static void initializeStudentArray(List<StudentData> students) {

@@ -35,17 +35,17 @@ import java.util.stream.Stream;
 public class Exercise_31 {
 
   public static void main(String[] args) {
-//    Stream.generate(() -> new Random().nextInt(42) + 1)
-//        .distinct()
-//        .limit(5)
-//        .sorted()
-//        .forEach(System.out::println);
-
     Stream.generate(() -> new Random().nextInt(42) + 1)
         .distinct()
-        .limit(43)
-//        .sorted()
+        .limit(15)
+        .sorted()
         .forEach(System.out::println);
+
+//    Stream.generate(() -> new Random().nextInt(42) + 1)
+//        .distinct()
+//        .limit(43)
+////        .sorted()
+//        .forEach(System.out::println);
     // 1. What happens if you put limit() before distinct()?
     // From repeated tests, no duplicates have being shown BUT i believe that duplicates can be generated.
 
