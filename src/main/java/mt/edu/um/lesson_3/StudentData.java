@@ -16,6 +16,7 @@ public class StudentData implements Student {
   private final Gender gender;
   private List<String> emails;
   private String nationalId;
+  private StudentData studentBuddy;
 
   public StudentData(long id, String name, String surname, Gender gender, String nationalId) {
     this.id = id;
@@ -23,6 +24,14 @@ public class StudentData implements Student {
     this.surname = surname;
     this.gender = gender;
     this.nationalId = nationalId;
+  }
+
+  public Optional<StudentData> getStudyBuddy() {
+    return Optional.of(this.studentBuddy);
+  }
+
+  public void setStudentBuddy(StudentData studentBuddy) {
+    this.studentBuddy = studentBuddy;
   }
 
   @Override
