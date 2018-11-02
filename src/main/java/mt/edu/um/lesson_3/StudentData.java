@@ -13,15 +13,18 @@ public class StudentData implements Student {
   private final long id;
   private final String name;
   private final String surname;
+  private final int age;
   private final Gender gender;
   private List<String> emails;
   private String nationalId;
   private StudentData studentBuddy;
 
-  public StudentData(long id, String name, String surname, Gender gender, String nationalId) {
+  public StudentData(long id, String name, String surname, int age, Gender gender,
+      String nationalId) {
     this.id = id;
     this.name = name;
     this.surname = surname;
+    this.age = age;
     this.gender = gender;
     this.nationalId = nationalId;
   }
@@ -40,10 +43,11 @@ public class StudentData implements Student {
     sb.append("id=").append(id);
     sb.append(", name='").append(name).append('\'');
     sb.append(", surname='").append(surname).append('\'');
+    sb.append(", age='").append(age).append('\'');
     sb.append(", gender=").append(gender);
     sb.append(", emails=").append(emails);
     sb.append(", nationalId='").append(nationalId).append('\'');
-    sb.append(", buddyName='").append(studentBuddy.name).append('\'');
+//    sb.append(", buddyName='").append(studentBuddy.name).append('\'');
     sb.append('}');
     return sb.toString();
   }
@@ -77,5 +81,9 @@ public class StudentData implements Student {
 
   public void setEmails(List<String> emails) {
     this.emails = emails;
+  }
+
+  public int getAge() {
+    return age;
   }
 }
