@@ -7,15 +7,10 @@ import java.util.Arrays;
  */
 public class Exercise_7 {
 
-  static StudentData[] students = StudentDataUtil.generate();
+  private static StudentData[] students = StudentDataUtil.generate();
 
   public static void main(String[] args) {
     Arrays.stream(students)
-        .forEach(
-            student -> {
-              if (student.getNationalId().isPresent()) {
-                System.out.println(student);
-              }
-            });
+        .forEach(student -> student.getNationalId().ifPresent(System.out::println));
   }
 }

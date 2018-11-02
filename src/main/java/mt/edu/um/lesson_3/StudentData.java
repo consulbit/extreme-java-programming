@@ -27,7 +27,7 @@ public class StudentData implements Student {
   }
 
   public Optional<StudentData> getStudyBuddy() {
-    return Optional.of(this.studentBuddy);
+    return Optional.ofNullable(this.studentBuddy);
   }
 
   public void setStudentBuddy(StudentData studentBuddy) {
@@ -43,6 +43,7 @@ public class StudentData implements Student {
     sb.append(", gender=").append(gender);
     sb.append(", emails=").append(emails);
     sb.append(", nationalId='").append(nationalId).append('\'');
+    sb.append(", buddyName='").append(studentBuddy.name).append('\'');
     sb.append('}');
     return sb.toString();
   }
