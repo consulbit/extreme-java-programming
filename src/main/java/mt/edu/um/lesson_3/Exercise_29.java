@@ -1,5 +1,7 @@
 package mt.edu.um.lesson_3;
 
+import static java.lang.System.out;
+
 import java.util.Optional;
 import java.util.stream.Stream;
 
@@ -11,12 +13,20 @@ import java.util.stream.Stream;
 public class Exercise_29 {
 
   public static void main(String[] args) {
+    // First point
     Stream<Integer> integers = Stream.of(31, 17, 6, 16, 17);
     Optional<Integer> productAmongAllValues = integers.reduce((acc, value) -> acc * value);
-    System.out.println("Total product: " + productAmongAllValues.orElse(1));
+    out.println("Total product: " + productAmongAllValues.orElse(1));
 
+    // Second point
     Stream<Integer> integers2 = Stream.of(31, 17, 6, 16, 17);
     Integer productAmongAllValues2 = integers2.reduce(1, (acc, value) -> acc * value);
-    System.out.println("Total product: " + productAmongAllValues2);
+    out.println("Total product: " + productAmongAllValues2);
+
+    // First point
+    Stream<Integer> emptyStream = Stream.empty();
+    Optional<Integer> empty = emptyStream.reduce((acc, value) -> acc * value);
+    out.println("Empty: " + empty);
+
   }
 }

@@ -10,11 +10,11 @@ import mt.edu.um.lesson_2.Student;
  */
 public class StudentData implements Student {
 
-  private final long id;
-  private final String name;
-  private final String surname;
-  private final int age;
-  private final Gender gender;
+  private long id;
+  private String name;
+  private String surname;
+  private int age;
+  private Gender gender;
   private List<String> emails;
   private String nationalId;
   private StudentData studentBuddy;
@@ -69,6 +69,10 @@ public class StudentData implements Student {
   @Override
   public Long getId() {
     return this.id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
   }
 
   public Gender getGender() {
